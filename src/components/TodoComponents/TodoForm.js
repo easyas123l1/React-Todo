@@ -17,7 +17,7 @@ class TodoForm extends Component {
     console.log('submit working!');
 
     //call function from props here
-
+    this.props.addTodo(this.state.item);
     this.setState({ item: '' })
   }
 
