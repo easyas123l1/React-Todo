@@ -2,24 +2,11 @@ import React, { Component }  from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
 
-let data = [
-  {
-    task: 'Organize Garage',
-    id: 1528817077286,
-    completed: false
-  },
-  {
-    task: 'Bake Cookies',
-    id: 1528817084358,
-    completed: false
-  }
-];
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      todo: data
+      todo: []
     };
   }
 
@@ -54,7 +41,7 @@ class App extends Component {
       <div>
         <h2>Welcome to your Todo App!</h2>
         <TodoForm addTodo={this.addTodo}/>
-        <TodoList toggleComplete={this.toggleComplete} todo={this.state.todo}/>
+        <TodoList toggleCompleted={this.toggleCompleted} todo={this.state.todo}/>
       </div>
     );
   }
