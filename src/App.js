@@ -36,7 +36,7 @@ class App extends Component {
 
   filterCompleted = () => {
     this.setState({
-      todo: this.state.todo.filter(item =>  item.completed === false)
+      todo: this.state.todo.filter(item =>  !item.completed)
     })
   }
   // you will need a place to store your state in this component.
