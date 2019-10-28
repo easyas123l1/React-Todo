@@ -53,9 +53,8 @@ class App extends Component {
     return (
       <div>
         <h2>Welcome to your Todo App!</h2>
-        <h3>Todo:</h3> 
         <TodoForm addTodo={this.addTodo}/>
-        <TodoList todo={this.state.todo}/>
+        <TodoList toggleComplete={this.toggleComplete} todo={this.state.todo}/>
       </div>
     );
   }
