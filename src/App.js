@@ -14,7 +14,8 @@ class App extends Component {
     const newItem = {
       name: item,
       id: Date.now(),
-      completed: false
+      completed: false,
+      show: true
     }
     this.setState({ todo: [...this.state.todo, newItem ]})
   }
