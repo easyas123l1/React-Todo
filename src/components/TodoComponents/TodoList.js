@@ -5,6 +5,7 @@ const TodoList = props => {
   return (
     <div className='todo'>
       {props.todo.map(item => (
+        item.show &&
         <Todo 
         key={item.id}
         todo={item}

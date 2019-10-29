@@ -1,12 +1,14 @@
 import React, { Component }  from 'react';
 import TodoForm from './components/TodoComponents/TodoForm';
 import TodoList from './components/TodoComponents/TodoList';
+import TodoSearch from './components/TodoComponents/TodoSearch';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      todo: []
+      todo: [],
+      search: ''
     };
   }
 
@@ -35,14 +37,19 @@ class App extends Component {
     })
   }
 
+  handleChanges = (e) => {
+    this.setState({ search: e.target.value })
+  }
+
+  toggleShow = () => {
+
+  }
+
   filterCompleted = () => {
     this.setState({
       todo: this.state.todo.filter(item =>  !item.completed)
     })
   }
-  // you will need a place to store your state in this component.
-  // design `App` to be the parent component of your application.
-  // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
       <div className='big'>
@@ -50,6 +57,7 @@ class App extends Component {
         <p className='completed'>If word is like this its selected to be cleared from list!</p>
         <TodoForm  addTodo={this.addTodo} filterCompleted={this.filterCompleted}/>
         <TodoList toggleCompleted={this.toggleCompleted} todo={this.state.todo}/>
+        <TodoSearch search={this.state.search} handleChanges={this.handleChanges} />
       </div>
     );
   }
