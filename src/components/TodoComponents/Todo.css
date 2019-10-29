@@ -1,6 +1,8 @@
 .completed {
   text-decoration: line-through;
   background-color: white;
+  width: 50%;
+  margin: 0 auto;
   color: red;
   text-align: center;
 }
@@ -25,5 +27,7 @@ body {
 }
 
 .todo {
+  margin: 0 auto;
   background-color: white;
+  width: 50%
 }
