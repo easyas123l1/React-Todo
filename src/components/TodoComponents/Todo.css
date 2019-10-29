@@ -1,4 +1,29 @@
 .completed {
   text-decoration: line-through;
-  background-color: yellow;
+  background-color: white;
+  color: red;
+  text-align: center;
+}
+
+body {
+  background-color: gray;
+}
+
+.big {
+  flex-direction: column;
+}
+
+.h2 {
+  text-align: center;
+  margin: 1%;
+}
+
+.Todo {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.todo {
+  background-color: white;
 }

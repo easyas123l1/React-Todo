@@ -44,9 +44,10 @@ class App extends Component {
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
-        <TodoForm addTodo={this.addTodo} filterCompleted={this.filterCompleted}/>
+      <div className='big'>
+        <h2 className='h2'>Welcome to your Todo App!</h2>
+        <p className='completed'>If word is like this its selected to be cleared from list!</p>
+        <TodoForm  addTodo={this.addTodo} filterCompleted={this.filterCompleted}/>
         <TodoList toggleCompleted={this.toggleCompleted} todo={this.state.todo}/>
       </div>
     );
