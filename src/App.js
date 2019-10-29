@@ -39,10 +39,25 @@ class App extends Component {
 
   handleChanges = (e) => {
     this.setState({ search: e.target.value })
+    this.toggleShow(e.target.value);
   }
 
-  toggleShow = () => {
-
+  toggleShow = (e) => {
+    this.setState({
+      todo: this.state.todo.map(item => {
+        if (!item.name.includes(e)) {
+          return {
+            ...item,
+            show: false
+          }
+        } else {
+          return {
+            ...item, 
+            show: true
+          }
+        }
+      })
+    })
   }
 
   filterCompleted = () => {
